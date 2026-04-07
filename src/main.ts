@@ -4,15 +4,9 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // CORS ayarları - genişletilmiş
+  // CORS ayarları - dışarıdan çağrı için genişletildi
   app.enableCors({
-    origin: [
-      'http://localhost:3000',
-      'http://localhost:3001',
-      'https://derece1.vercel.app', // Frontend domain
-      'null', // Local HTML dosyaları için
-      /^https:\/\/.*\.vercel\.app$/, // Tüm Vercel subdomains
-    ],
+    origin: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
     credentials: true,
