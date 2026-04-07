@@ -1,0 +1,19 @@
+### Register Testi (Kayıt Olma)
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "demo2@demo.com",
+    "password": "sifre123"
+}
+
+###
+
+### Login Testi (Giriş Yapma)
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "demo@demo.com",
+    "password": "123456"
+}
