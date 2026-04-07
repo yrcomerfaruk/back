@@ -3,8 +3,9 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "demo2@demo.com",
-    "password": "sifre123"
+    "name": "Demo User",
+    "email": "aiderece@gmail.com",
+    "password": "1234567"
 }
 
 ###
@@ -14,6 +15,17 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "demo@demo.com",
-    "password": "123456"
+    "email": "omer@demo.com",
+    "password": "1234567"
+}
+
+###
+
+### Flowise Chat Proxy Testi
+POST http://localhost:3000/chat/flowise
+Content-Type: application/json
+
+{
+    "prompt": "Merhaba, bana kısa bir selam mesajı yaz.",
+    "flowId": "c6f7f163-d503-4922-8557-b4ac4f2e78a7"
 }
